@@ -1,9 +1,3 @@
-
-<script>
-export default {
-    
-    }
-</script>
 <template>
     <div>
         <!--<<<<<<<<<< 2021與大師有約-sec_03 >>>>>>>>>>-->
