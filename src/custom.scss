@@ -1107,6 +1107,7 @@ iframe {
     &__story {
         padding: 10rem 12rem 0;
         color: $font-main-color;
+        text-align: left;
         transition: all 300ms ease-in-out;
         @media screen and(max-width: 576px) {
             padding: 3rem 1rem 2rem;
