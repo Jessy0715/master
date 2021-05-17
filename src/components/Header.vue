@@ -8,8 +8,8 @@ export default {
     <div>
         <nav class="navbar navbar-expand-md bg-navbar">
             <a class="navbar-brand" href="https://hhh.com.tw" target="_blank">
-                <img class="d-none d-md-block" src="../assets/images/icon/logo.svg" width="115" alt="幸福空間">
-                <img class="d-block d-md-none" src="../assets/images/icon/logo_mb.svg" width="115" alt="幸福空間">
+                <img class="d-none d-md-block" src="~@/assets/images/icon/logo.svg" width="115" alt="幸福空間">
+                <img class="d-block d-md-none" src="~@/assets/images/icon/logo_mb.svg" width="115" alt="幸福空間">
             </a>
 
             <div class="menu-toggle d-block d-md-none">
