@@ -1,3 +1,16 @@
+<script>
+export default {
+    methods: { 
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+</script>
+
 <template>
     <div>
         <!--<<<<<<<<<< 2021與大師有約-sec_03 >>>>>>>>>>-->
@@ -7,7 +20,7 @@
                 <img class="decoBg__img" src="~@/assets/images/bg/dot01_pc.png" alt="幸福空間 - 與大師有約">
             </div>
             <!-- gotop -->
-            <div class="gotop-btn-wrapper d-none d-md-block">
+            <div class="gotop-btn-wrapper d-none d-md-block" @click="scrollToTop">
                 <img class="gotop-btn" src="~@/assets/images/icon/gotop.svg">
             </div>
             <div class="container d-flex justify-content-center align-items-center">
@@ -202,8 +215,6 @@
                 </div>
             </aside>
             <!-- PC 版 end -->
-
-
         </section>
     </div>
 </template>
