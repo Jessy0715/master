@@ -28,8 +28,8 @@ export default {
         }
     },
     mounted() {
-        this.$root.$on('bv::modal::show', (bvEvent, modalId) => {
-            console.log(bvEvent, modalId)
+        this.$root.$on('bv::modal::show', (modalId) => {
+            console.log(modalId);
         })
     }
 }
@@ -70,6 +70,32 @@ export default {
                             :style="{ backgroundImage: 'url(' + image.thumb + ')' }">
                             <img class="play" src="~@/assets/images/intro01/YT_icon_black.png" alt="YT-icon">
                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="d-block d-md-none">
+            <section class="intro01 bg-black">
+                <div class="intro01__context">
+                    <h2>林 馬克</h2>
+                    <p class="ml-5 mb-2">Interior Design Masters</p>
+                    <div>Mark</div>
+                    <div class="ls-2 ml-5">Lintott</div>
+                </div>
+                <div class="intro01__bg">
+                    <picture>
+                        <img src="~@/assets/images/dsr/01/person.png" width="92%" alt="林馬克設計">
+                    </picture>
+                </div>
+                <div class="intro01__video py-5">
+                    <div 
+                        class="intro01__video__bg"
+                        v-for="(image, imageIndex) in items"
+                        :key="imageIndex"
+                        @click="index = imageIndex"
+                        :style="{ backgroundImage: 'url(' + image.thumb + ')' }">
+                        <img class="play" src="~@/assets/images/intro01/YT_icon_black.png" width="45px" alt="YT-icon">
                     </div>
                 </div>
             </section>
@@ -153,28 +179,28 @@ export default {
                     </aside>
                 </div>
 
-                <!-- <div class="d-block d-md-none">
+                <div class="d-block d-md-none">
                     <aside class="py-md-4 d-block">
-                        <img data-toggle="modal" data-target="#case01" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_01/cover_mb.jpg" width="100%"
+                        <img v-b-modal="'markCase-01'" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_01/cover_mb.jpg" width="100%"
                             alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case02" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_02/cover_mb.jpg" width="100%"
+                        <img v-b-modal="'markCase-02'" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_02/cover_mb.jpg" width="100%"
                             alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case03" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_03/cover_mb.jpg" width="100%"
+                        <img v-b-modal="'markCase-03'" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_03/cover_mb.jpg" width="100%"
                             alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case04" class="intro03__img mb-8" src="~@/assets/images/dsr/01/case/idx_04/cover_mb.jpg" width="100%"
+                        <img v-b-modal="'markCase-04'" class="intro03__img mb-8" src="~@/assets/images/dsr/01/case/idx_04/cover_mb.jpg" width="100%"
                             alt="Mark Portfolio">
                     </aside>
-                </div> -->
+                </div>
             </div>
 
             <div class="d-block d-md-none">
-                <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center pt-5">
                     <p class="intro03__portfolio--rt">
                         <a href="https://hhh.com.tw/columns/detail/4977/" target="_blank">SEE MORE</a>
                     </p>
 
                     <!-- gotop -->
-                    <div class="top-btn-wrapper pt-6 pb-4 d-block d-md-none">
+                    <div class="top-btn-wrapper pt-5 pb-4 d-block d-md-none">
                         <img class="gotop-btn" src="~@/assets/images/icon/gotop.svg">
                     </div>
                 </div>

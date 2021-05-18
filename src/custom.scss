@@ -963,6 +963,7 @@ body {
         @media screen and(max-width: 576px) {
             position: unset;
             padding: 3rem 0 0.5rem 3rem;
+            text-align: left;
         }
 
 
@@ -1156,6 +1157,8 @@ iframe {
             @media screen and(max-width: 576px) {
                 text-align: center;
                 color: $font-main-color;
+                padding-top: 4.5rem;
+                padding-bottom: 4.5rem;
             }
         }
 
