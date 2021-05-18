@@ -215,6 +215,161 @@ export default {
                 </div>
             </aside>
             <!-- PC 版 end -->
+
+            <!-- mb 版 start -->
+            <article class="pt-5 pb-4 d-block d-md-none" id="master01-mb">
+                <div class="px-2">
+                    <div class="detail__context">
+                        <div class="detail__context__key">
+                            <div class="detail__context__name">林馬克設計</div>
+                            <div class="detail__context__company">MARK LINTOTT DESIGN</div>
+                        </div>
+                        <div class="detail__context__pic">
+                            <router-link class="d-block" to="/mark">
+                                <img class="img-fluid" src="~@/assets/images/dsr/01/person_mb.png" width="95%" alt="林馬克設計">
+                            </router-link>
+                        </div>
+                        <div class="detail__context__area">
+                            <div class="text-center my-2">
+                                <router-link to="/mark">
+                                    <h2 class="detail__allname mb-4">
+                                        <span class="detail__allname--en">Mark</span>
+                                        <span class="detail__allname--ch">林馬克</span>
+                                    </h2>
+                                </router-link>
+                            </div>
+                            <p>
+                                林馬克，出生於英國。畢業於Buckinghamshire College環境與室內設計頭等學士。1981年進入國際知名建築師，也是求學時期的指導教授Julian
+                                Powell-Puck
+                                及David vConnor的事務所工作。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pt-5 pb-4 d-block d-md-none" id="master02-mb">
+                <div class="px-2">
+                    <div class="detail__context">
+                        <div class="detail__context__key">
+                            <div class="detail__context__name">唐林建築室內設計 </div>
+                            <div class="detail__context__company">INTERIOR QUARRY DESIGN</div>
+                        </div>
+                        <div class="detail__context__pic">
+                            <router-link class="d-block" to="/john">
+                                <img class="img-fluid" src="~@/assets/images/dsr/02/person_mb.png" width="100%" alt="唐林建築室內設計">
+                            </router-link>
+                        </div>
+                        <div class="detail__context__area">
+                            <div class="text-center my-2">
+                                <router-link to="/john">
+                                    <h2 class="detail__allname mb-4">
+                                        <span class="detail__allname--en">John</span>
+                                        <span class="detail__allname--ch">廖韋強</span>
+                                    </h2>
+                                </router-link>
+                            </div>
+                            <p>
+                                唐林建築室內設計總監，從事室內設計超過30餘年，同時也是生活實踐家、極限運動家，熱愛廚藝、藝術繪畫與帆船運動，認為生活是瘋狂的創作展演，兼具藝術家的真摯情懷與卓然品味，透過作品展現與國際對話的宏觀企圖。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pt-5 pb-4 d-block d-md-none" id="master03-mb">
+                <div class="px-2">
+                    <div class="detail__context">
+                        <div class="detail__context__key">
+                            <div class="detail__context__name">舒杰室內裝修設計 </div>
+                            <div class="detail__context__company">Dj+ PLUS DESIGN</div>
+                        </div>
+                        <div class="detail__context__pic">
+                            <router-link class="d-block" to="/debby">
+                                <img class="img-fluid" src="~@/assets/images/dsr/03/person_mb.png" width="100%" alt="舒杰室內裝修設計">
+                            </router-link>
+                        </div>
+                        <div class="detail__context__area">
+                            <div class="text-center my-2">
+                                <router-link to="/debby">
+                                    <h2 class="detail__allname mb-4">
+                                        <span class="detail__allname--en">Debby</span>
+                                        <span class="detail__allname--ch">陳琬婷</span>
+                                    </h2>
+                                </router-link>
+                            </div>
+                            <p class="font-roboto text-center">
+                                “A designer should be three things : temperament, heart and passion”
+                            </p>
+                            <p>
+                                給我一隻筆... 我可以創造一個空間。在這娑婆世界，彷彿自己可以任意翱翔至想像的世界各個角落，用設計為眾生安定身心，打造獨一無二的空間。
+                            </p>
+                            <p>
+                                陳琬婷總監畢業於加拿大曼尼托巴大學建築系，與藝術淵源極深，獲得多項國際大獎，包括 2018 新加玻室內設計協會 SIDS ; 2019 義大利 A+Design Bronze; 2019 美國 Architecture MasterPrize(AMP); 2020 德國 German Design Award(GDA); 2020 IPA 英國國際地產產獎等. 其創作過程追求精進與提升, 讓設計及工藝層次與先進跳脫框架, 並持續關注環境綠建材議題與應用。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pt-5 pb-4 d-block d-md-none" id="master04-mb">
+                <div class="px-2">
+                    <div class="detail__context">
+                        <div class="detail__context__key">
+                            <div class="detail__context__name">麒成益設計 </div>
+                            <div class="detail__context__company">OUTLOOK DESIGN</div>
+                        </div>
+                        <div class="detail__context__pic">
+                            <router-link class="d-block" to="/fang">
+                                <img class="img-fluid" src="~@/assets/images/dsr/04/person_mb.png" width="100%" alt="麒成益設計">
+                            </router-link>
+                        </div>
+                        <div class="detail__context__area">
+                            <div class="text-center my-2">
+                                <router-link to="/fang">
+                                    <h2 class="detail__allname mb-4">
+                                        <span class="detail__allname--en">Fang</span>
+                                        <span class="detail__allname--ch">方志宏</span>
+                                    </h2>
+                                </router-link>
+                            </div>
+                            <p>
+                                熟稔歐美風格，展現大器美學的方志宏，其實畢業於成大工程科學系，不意當兵時陰錯陽差被調派為工程官，一腳踏入建築領域，決定申請攻讀賓夕法尼亞大學建築研究所，選擇將生活的經驗與哲學以建築為載體，去探索每個不同命題裡的深奧與綺麗。因為大學非建築系畢業，Penn的經歷成了一趟影響他最深的建築學習之旅。「路易斯・康（Louis Kahn）帶領賓大建築系走過最輝煌的時代，是我心目中的大師典範。」
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pt-5 pb-4 d-block d-md-none" id="master05-mb">
+                <div class="px-2">
+                    <div class="detail__context">
+                        <div class="detail__context__key">
+                            <div class="detail__context__name">雲方設計 </div>
+                            <div class="detail__context__company">AMY INTERIOR DESIGN</div>
+                        </div>
+                        <div class="detail__context__pic">
+                            <router-link class="d-block"  to="/amy">
+                                <img class="img-fluid" src="~@/assets/images/dsr/05/person_mb.png" width="100%" alt="雲方設計">
+                            </router-link>
+                        </div>
+                        <div class="detail__context__area">
+                            <div class="text-center my-2">
+                                <router-link  to="/amy">
+                                    <h2 class="detail__allname mb-4">
+                                        <span class="detail__allname--en">Amy</span>
+                                        <span class="detail__allname--ch">潘仕敏</span>
+                                    </h2>
+                                </router-link>
+                            </div>
+                            <p>
+                                善於溝通，注重細節，精於搭配，是雲方設計作品的優勢。擅長融合歐美古典精華，以及和諧的色彩運用與窗帘家具規劃，點缀骨董飾品的搭配，創造舒適迷人的古典居住環境。讓「回家」成為每位業主一天中最美好也最值得期待的事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- mb 版 end -->
         </section>
     </div>
 </template>
