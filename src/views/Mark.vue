@@ -17,6 +17,7 @@ export default {
             index: null,
             slide: 0,
             sliding: null,
+            bodyBgVariant: 'light'
         }
     },
     methods: {
@@ -25,6 +26,12 @@ export default {
         },
         onSlideEnd(slide) {
             this.sliding = false
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     },
     mounted() {
@@ -200,7 +207,7 @@ export default {
                     </p>
 
                     <!-- gotop -->
-                    <div class="top-btn-wrapper pt-5 pb-4 d-block d-md-none">
+                    <div class="top-btn-wrapper pt-5 pb-4 d-block d-md-none" @click="scrollToTop">
                         <img class="gotop-btn" src="~@/assets/images/icon/gotop.svg">
                     </div>
                 </div>
@@ -216,7 +223,8 @@ export default {
         </CoolLightBox>
 
 
-        <b-modal id="markCase-01" hide-footer hide-header centered>
+        <b-modal id="markCase-01" hide-footer hide-header centered 
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -231,7 +239,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="markCase-02" hide-footer hide-header centered>
+        <b-modal id="markCase-02" hide-footer hide-header centered
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -248,7 +257,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="markCase-03" hide-footer hide-header centered>
+        <b-modal id="markCase-03" hide-footer hide-header centered
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -265,7 +275,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="markCase-04" hide-footer hide-header centered>
+        <b-modal id="markCase-04" hide-footer hide-header centered
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"

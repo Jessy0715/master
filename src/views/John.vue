@@ -17,6 +17,7 @@ export default {
             index: null,
             slide: 0,
             sliding: null,
+            bodyBgVariant: 'light'
         }
     },
     methods: {
@@ -25,11 +26,17 @@ export default {
         },
         onSlideEnd(slide) {
             this.sliding = false
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     },
     mounted() {
-        this.$root.$on('bv::modal::show', (bvEvent, modalId) => {
-            console.log(bvEvent, modalId)
+        this.$root.$on('bv::modal::show', (modalId) => {
+            console.log(modalId);
         })
     }
 }
@@ -74,6 +81,33 @@ export default {
                 </div>
             </section>
         </div>
+
+        <div class="d-block d-md-none">
+            <section class="intro01 bg-black">
+                <div class="intro01__context">
+                    <h2>廖 韋強</h2>
+                    <p class="ml-5 mb-2">Interior Design Masters</p>
+                    <div>John</div>
+                    <div class="ml-5">Liao</div>
+                </div>
+                <div class="intro01__bg">
+                    <picture>
+                        <img src="~@/assets/images/dsr/02/person.png" width="92%" alt="唐林建築室內設計">
+                    </picture>
+                </div>
+                <div class="intro01__video py-5">
+                    <div 
+                        class="intro01__video__bg"
+                        v-for="(image, imageIndex) in items"
+                        :key="imageIndex"
+                        @click="index = imageIndex"
+                        :style="{ backgroundImage: 'url(' + image.thumb + ')' }">
+                        <img class="play" src="~@/assets/images/intro01/YT_icon_black.png" width="45px" alt="YT-icon">
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
         <!--<<<<<<<<<< Logo 與故事簡介-intro_02 >>>>>>>>>>-->
 
@@ -127,20 +161,6 @@ export default {
 
                 <div class="d-none d-md-block">
                     <aside class="py-md-4">
-
-                        <!-- <div
-                            class="intro03__bgWrapper mr"
-                            :class="`intro03__bgWrapper--0${`${imageIndex +1}`}`"
-                            v-for="(image, imageIndex) in items"
-                            :key="imageIndex"
-                            >
-                            <div class="intro03__bg"
-                                :class="`intro03__bg--0${`${imageIndex +1}`}`"
-                                :style="{ backgroundImage: 'url(' + image.case + ')' }"
-                                @click="index = imageIndex">
-                            </div>
-                        </div> -->
-
                         <div class="intro03__bgWrapper intro03__bgWrapper--01 mr" v-b-modal="'johnCase-01'">
                             <div class="intro03__bg intro03__bg--01"></div>
                         </div>
@@ -156,28 +176,28 @@ export default {
                     </aside>
                 </div>
 
-                <!-- <div class="d-block d-md-none">
+                <div class="d-block d-md-none">
                     <aside class="py-md-4 d-block">
-                        <img data-toggle="modal" data-target="#case01" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_01/cover_mb.jpg" width="100%"
-                            alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case02" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_02/cover_mb.jpg" width="100%"
-                            alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case03" class="intro03__img mb-4" src="~@/assets/images/dsr/01/case/idx_03/cover_mb.jpg" width="100%"
-                            alt="Mark Portfolio">
-                        <img data-toggle="modal" data-target="#case04" class="intro03__img mb-8" src="~@/assets/images/dsr/01/case/idx_04/cover_mb.jpg" width="100%"
-                            alt="Mark Portfolio">
+                        <img v-b-modal="'johnCase-01'" class="intro03__img mb-4" src="~@/assets/images/dsr/02/case/idx_01/cover_mb.jpg" width="100%"
+                            alt="John Portfolio">
+                        <img v-b-modal="'johnCase-02'" class="intro03__img mb-4" src="~@/assets/images/dsr/02/case/idx_02/cover_mb.jpg" width="100%"
+                            alt="John Portfolio">
+                        <img v-b-modal="'johnCase-03'" class="intro03__img mb-4" src="~@/assets/images/dsr/02/case/idx_03/cover_mb.jpg" width="100%"
+                            alt="John Portfolio">
+                        <img v-b-modal="'johnCase-04'" class="intro03__img mb-8" src="~@/assets/images/dsr/02/case/idx_04/cover_mb.jpg" width="100%"
+                            alt="John Portfolio">
                     </aside>
-                </div> -->
+                </div>
             </div>
 
             <div class="d-block d-md-none">
-                <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center pt-5">
                     <p class="intro03__portfolio--rt">
                         <a href="https://hhh.com.tw/designer-index.php?designer_id=681" target="_blank">SEE MORE</a>
                     </p>
 
                     <!-- gotop -->
-                    <div class="top-btn-wrapper pt-6 pb-4 d-block d-md-none">
+                    <div class="top-btn-wrapper pt-5 pb-4 d-block d-md-none" @click="scrollToTop">
                         <img class="gotop-btn" src="~@/assets/images/icon/gotop.svg">
                     </div>
                 </div>
@@ -193,7 +213,8 @@ export default {
         </CoolLightBox>
 
 
-        <b-modal id="johnCase-01" hide-footer hide-header centered scrollable>
+        <b-modal id="johnCase-01" hide-footer hide-header centered scrollable
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -212,7 +233,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="johnCase-02" hide-footer hide-header centered scrollable>
+        <b-modal id="johnCase-02" hide-footer hide-header centered scrollable
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -232,7 +254,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="johnCase-03" hide-footer hide-header centered scrollable>
+        <b-modal id="johnCase-03" hide-footer hide-header centered scrollable
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
@@ -252,7 +275,8 @@ export default {
             </b-carousel>
         </b-modal>
 
-        <b-modal id="johnCase-04" hide-footer hide-header centered scrollable>
+        <b-modal id="johnCase-04" hide-footer hide-header centered scrollable
+                :body-bg-variant="bodyBgVariant">
             <b-carousel
                 id="carousel-1"
                 v-model="slide"
