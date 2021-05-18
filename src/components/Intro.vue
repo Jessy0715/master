@@ -1,6 +1,6 @@
 <script>
 export default {
-    methods: { 
+    methods: {
         scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -370,6 +370,12 @@ export default {
                 </div>
             </article>
             <!-- mb 版 end -->
+
+            <!-- gotop -->
+            <div class="top-btn-wrapper d-block d-md-none" @click="scrollToTop">
+                <img class="gotop-btn" src="~@/assets/images/icon/gotop.svg">
+            </div>
+
         </section>
     </div>
 </template>

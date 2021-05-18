@@ -1,8 +1,11 @@
-
 <script>
-export default {
-
-}
+    export default {
+        data() {
+            return {
+                isTransform: false,
+            }
+        }
+    }
 </script>
 <template>
     <div>
@@ -12,7 +15,7 @@ export default {
                 <img class="d-block d-md-none" src="~@/assets/images/icon/logo_mb.svg" width="115" alt="幸福空間">
             </a>
 
-            <div class="menu-toggle d-block d-md-none">
+            <div class="menu-toggle d-block d-md-none" :class="{on: isTransform}" @click="isTransform = !isTransform">
                 <div class="one"></div>
                 <div class="two"></div>
                 <div class="three"></div>
@@ -36,39 +39,39 @@ export default {
                 </ul>
             </div>
         </nav>
-        <div class="navbar-collapse fixed d-block d-lg-none" id="navbarNav-mb">
+        <div class="navbar-collapse fixed d-block d-lg-none" :class="{open: isTransform}" id="navbarNav-mb">
             <ul class="navbar-nav bg-black p-4">
-                <li class="nav-item nav-item-trigger" data-section="#sec02-mb">
-                    <router-link to="/">Home</router-link>
+                <li class="nav-item nav-item-trigger" data-section="#sec02-mb" @click="isTransform = !isTransform">
+                    <router-link class="nav-link" to="/">Home</router-link>
                 </li>
-                <li class="nav-item nav-item-trigger border-dark" data-section="#master01-mb">
+                <li class="nav-item nav-item-trigger border-dark" data-section="#master01-mb" @click="isTransform = !isTransform">
                     <router-link class="nav-link" to="/mark">
                         <span class="mr-5">Designer</span>
                         林馬克 &nbsp; Mark
                     </router-link>
                 </li>
-                <li class="nav-item nav-item-trigger border-dark" data-section="#master02-mb">
+                <li class="nav-item nav-item-trigger border-dark" data-section="#master02-mb" @click="isTransform = !isTransform">
                     <router-link class="nav-link" to="/john">
                         <span class="mr-5 is-hidden">Designer </span>
                         廖韋強 &nbsp;
                         John
                     </router-link>
                 </li>
-                <li class="nav-item nav-item-trigger border-dark" data-section="#master03-mb">
+                <li class="nav-item nav-item-trigger border-dark" data-section="#master03-mb" @click="isTransform = !isTransform">
                     <router-link class="nav-link" to="/debby">
                         <span class="mr-5 is-hidden">Designer </span>
                         陳琬婷 &nbsp;
                         Debby
                     </router-link>
                 </li>
-                <li class="nav-item nav-item-trigger border-dark" data-section="#master04-mb">
+                <li class="nav-item nav-item-trigger border-dark" data-section="#master04-mb" @click="isTransform = !isTransform">
                     <router-link class="nav-link" to="/Fang">
                         <span class="mr-5 is-hidden">Designer </span>
                         方志宏 &nbsp;
                         Fang
                     </router-link>
                 </li>
-                <li class="nav-item nav-item-trigger" data-section="#master05-mb">
+                <li class="nav-item nav-item-trigger" data-section="#master05-mb" @click="isTransform = !isTransform">
                     <router-link class="nav-link" to="/amy">
                         <span class="mr-5 is-hidden">Designer </span>
                         潘仕敏 &nbsp;
