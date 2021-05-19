@@ -371,8 +371,13 @@ body {
 // <!--<<<<<<<<<< 新時代趨勢解讀-sec_02 >>>>>>>>>>-->
 
 .sec02 {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+    transition: all 300ms ease-in-out;
     @media screen and(max-width: 576px) {
         border: 1px solid #000;
+        padding-top: 0;
+        padding-bottom: 6.5rem;
     }
 
     h2 {
